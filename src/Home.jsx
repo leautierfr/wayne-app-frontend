@@ -29,6 +29,14 @@ export function Home() {
     });
   };
 
+  const handleCreateFavorite = (params) => {
+    console.log("handleCreateFavorite", params);
+    const temp = { song_id: params.id };
+    axios.post("http://localhost:3000/favorites.json", temp).then((response) => {
+      setFavorites([...favorites, response.data]);
+    });
+  };
+
   const handleShowSong = (song) => {
     console.log("handleShowSong", song);
     setIsSongsShowVisible(true);
@@ -75,7 +83,12 @@ export function Home() {
       <SongsNew onCreateSong={handleCreateSong} />
       <SongsIndex songs={songs} onShowSong={handleShowSong} />
       <Modal show={isSongsShowVisible} onClose={handleClose}>
-        <SongsShow song={currentSong} onUpdateSong={handleUpdateSong} onDestroySong={handleDestroySong} />
+        <SongsShow
+          song={currentSong}
+          onUpdateSong={handleUpdateSong}
+          onDestroySong={handleDestroySong}
+          onCreateFavorite={handleCreateFavorite}
+        />
       </Modal>
     </div>
   );

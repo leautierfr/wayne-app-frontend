@@ -1,8 +1,15 @@
+import { useState } from "react";
 export function SongsShow(props) {
   const handleSubmit = (event) => {
     event.preventDefault();
     const params = new FormData(event.target);
     props.onUpdateSong(props.song.id, params, () => event.target.reset());
+    const [favorites, setFavorites] = useState([]);
+  };
+
+  const handleClick2 = () => {
+    console.log(props.song.name);
+    props.onCreateFavorite(props.song);
   };
 
   const handleClick = () => {
@@ -32,7 +39,7 @@ export function SongsShow(props) {
         <button type="submit">Update song</button>
       </form>
       <button onClick={handleClick}>Remove song</button>
-      <button>Add to Favorites</button>
+      <button onClick={handleClick2}>Add to Favorites</button>
     </div>
   );
 }

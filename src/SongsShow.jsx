@@ -25,16 +25,16 @@ export function SongsShow(props) {
       <p>URL: {props.song.song_url}</p>
       <form onSubmit={handleSubmit}>
         <div>
-          Name: <input defaultValue="props.song.name" name="name" type="text" />
+          Name: <input defaultValue={props.song.name} name="name" type="text" />
         </div>
         <div>
-          Year: <input defaultValue="props.song.year" name="year" type="text" />
+          Year: <input defaultValue={props.song.year} name="year" type="text" />
         </div>
         <div>
-          Album: <input defaultValue="props.song.album" name="album" type="text" />
+          Album: <input defaultValue={props.song.album} name="album" type="text" />
         </div>
         <div>
-          URL: <input defaultValue="props.song.song_url" name="URL" type="text" />
+          URL: <input defaultValue={props.song.song_url} name="URL" type="text" />
         </div>
         <button type="submit">Update song</button>
       </form>

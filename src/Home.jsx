@@ -12,6 +12,7 @@ export function Home() {
   const [songs, setSongs] = useState([]);
   const [isSongsShowVisible, setIsSongsShowVisible] = useState(false);
   const [currentSong, setCurrentSong] = useState({});
+  const [favorites, setFavorites] = useState([]);
 
   const handleIndexSongs = () => {
     console.log("handleIndexSongs");
@@ -77,10 +78,10 @@ export function Home() {
 
   return (
     <div>
-      <Signup />
+      {/* <Signup />
       <Login />
       <LogoutLink />
-      <SongsNew onCreateSong={handleCreateSong} />
+      <SongsNew onCreateSong={handleCreateSong} /> */}
       <SongsIndex songs={songs} onShowSong={handleShowSong} />
       <Modal show={isSongsShowVisible} onClose={handleClose}>
         <SongsShow

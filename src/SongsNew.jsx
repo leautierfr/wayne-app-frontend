@@ -1,7 +1,9 @@
+import { SongsIndex } from "./SongsIndex";
 export function SongsNew(props) {
   const handleSubmit = (event) => {
     event.preventDefault();
     const params = new FormData(event.target);
+    console.log("handleSubmit", params);
     props.onCreateSong(params, () => event.target.reset());
   };
 

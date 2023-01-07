@@ -78,11 +78,13 @@ export function Home() {
 
   return (
     <div>
-      {/* <Signup />
-      <Login />
-      <LogoutLink />
-      <SongsNew onCreateSong={handleCreateSong} /> */}
-      <SongsIndex songs={songs} onShowSong={handleShowSong} />
+      {/* <SongsNew onCreateSong={handleCreateSong} /> */}
+      <div class="card">
+        <div class="card-body">
+          <SongsIndex songs={songs} onShowSong={handleShowSong} />
+        </div>
+      </div>
+
       <Modal show={isSongsShowVisible} onClose={handleClose}>
         <SongsShow
           song={currentSong}

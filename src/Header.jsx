@@ -6,6 +6,7 @@ import { Login } from "./Login";
 import { useState } from "react";
 
 export function Header() {
+  const [songs, setSongs] = useState([]);
   const [isSignupVisible, setIsSignUpVisible] = useState(false);
   const [isLoginVisible, setIsLoginVisible] = useState(false);
   const handleSignupShow = () => {

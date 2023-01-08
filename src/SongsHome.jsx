@@ -5,7 +5,6 @@ export function SongsHome() {
   const [songs, setSongs] = useState([]);
   const [isSongsShowVisible, setIsSongsShowVisible] = useState(false);
   const [currentSong, setCurrentSong] = useState({});
-  const [favorites, setFavorites] = useState([]);
 
   const handleCreateSong = (params, successCallback) => {
     console.log("handleCreateSong", params);

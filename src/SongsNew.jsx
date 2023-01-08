@@ -5,6 +5,7 @@ export function SongsNew(props) {
     const params = new FormData(event.target);
     console.log("handleSubmit", params);
     props.onCreateSong(params, () => event.target.reset());
+    window.location.href = "/";
   };
 
   return (

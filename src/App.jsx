@@ -5,7 +5,6 @@ import { Footer } from "./Footer";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import { Signup } from "./Signup";
 import { Login } from "./Login";
-import { SongsNew } from "./SongsNew";
 import { FavoritesIndex } from "./FavoritesIndex";
 
 function App() {

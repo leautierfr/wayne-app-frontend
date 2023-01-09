@@ -15,7 +15,10 @@ export function FavoritesHome() {
   useEffect(handleIndexFavorites, []);
   return (
     <div>
-      <FavoritesIndex favorites={favorites} />
+      <div class="card">
+        <div class="card-body"></div>
+        <FavoritesIndex favorites={favorites} />
+      </div>
     </div>
   );
 }

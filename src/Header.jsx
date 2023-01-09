@@ -4,6 +4,7 @@ import { Modal } from "./Modal";
 import { Signup } from "./Signup";
 import { Login } from "./Login";
 import { useState } from "react";
+import { LogoutLink } from "./LogoutLink";
 
 export function Header() {
   const [songs, setSongs] = useState([]);
@@ -27,9 +28,9 @@ export function Header() {
   };
 
   const handleLogout = (event) => {
-    event.prevenDefault();
-    delete axios.defaults.header.common["Authorization"];
-    localStorage.remveItem("jwt");
+    event.preventDefault();
+    delete axios.defaults.headers.common["Authorization"];
+    localStorage.removeItem("jwt");
     window.location.href = "/";
   };
 

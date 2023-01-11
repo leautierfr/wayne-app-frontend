@@ -75,18 +75,7 @@ export function Header() {
                 <Link to="/favorites"> Favorites </Link>
               </li>
               {localStorage.jwt === undefined ? (
-                <>
-                  <li className="nav-item px-3">
-                    <a onClick={handleSignupShow} href="#">
-                      Signup
-                    </a>
-                  </li>
-                  <li className="nav-item px-3">
-                    <a onClick={handleLoginShow} href="#">
-                      Login
-                    </a>
-                  </li>
-                </>
+                <></>
               ) : (
                 <li className="nav-item px-3">
                   <a onClick={handleLogout} href="#">

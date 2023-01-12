@@ -24,3 +24,11 @@ You'll need to have the backend code (https://github.com/leautierfr/wayne-app-ba
 You can view the app on http://localhost:5173
 
 ![screenshot](screenshot.png)
+
+### Roadmap
+
+Fix the unfavorite button.
+Improve aesthetics with bootstrap.
+Display favorite song names.
+Display favorites based on authenticated user.
+Find an api to facilitate the process to add music.

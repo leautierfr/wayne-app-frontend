@@ -1,9 +1,7 @@
 import { useState } from "react";
 export function FavoritesIndex(props) {
+  console.log(props);
   const [favorites, setFavorites] = useState([]);
-  const handleClick = () => {
-    props.onDestroyFavorite(props.favorite);
-  };
 
   return (
     <div>
@@ -13,7 +11,7 @@ export function FavoritesIndex(props) {
           <h2>
             {favorite.user_id}/{favorite.song_id}
           </h2>
-          <button onClick={handleClick}>Unfavorite</button>
+          <button onClick={() => props.onDestroyFavorite(favorite)}>Unfavorite</button>
         </div>
       ))}
     </div>
